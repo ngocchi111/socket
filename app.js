@@ -1,3 +1,4 @@
+require('dotenv');
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -16,6 +17,6 @@ app.get('/', (req, res) => {
     });
   });
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log('listening on *:3000');
 });
